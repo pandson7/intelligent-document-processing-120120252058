@@ -1,0 +1,50 @@
+USER REQUIREMENTS FOR INTELLIGENT DOCUMENT PROCESSING APPLICATION
+
+Project Owner: 
+Solution Type: project
+Timestamp: 1764651443592
+
+CORE REQUIREMENT:
+Build Intelligent Document Processing (IDP) application with the following specifications:
+
+1. USER INTERFACE:
+   - Simple user interface for uploading documents
+   - Display results once all 3 tasks are complete
+   - Keep the User interface simple
+
+2. DOCUMENT STORAGE:
+   - Store uploaded documents in AWS storage
+   - Trigger IDP pipeline upon upload
+
+3. IDP PIPELINE (3 tasks in order):
+   Task 1: OCR - Extract contents as key-value pair in JSON format
+           - Handle markdown-wrapped JSON correctly
+           - Support JPEG, PNG and PDF file formats
+   
+   Task 2: Document Classification
+           - Categories: Dietary Supplement, Stationery, Kitchen Supplies, Medicine, Driver License, Invoice, W2, Other
+   
+   Task 3: Document Summarization
+
+4. DATA STORAGE:
+   - Store results of each task in DynamoDB
+   - Display results in user interface once all 3 tasks complete
+
+5. TESTING REQUIREMENTS:
+   - Use sample documents from "~/ea_sample_docs/idp_docs" folder
+   - Test end-to-end: file upload → data extraction → classification → summarization
+   - Ensure all file formats (JPEG, PDF, PNG) work correctly
+   - Check AWS documentation for each file format before implementing
+   - Different services handle formats differently: Bedrock Claude: PDF as `document`, images as `image`
+
+6. DEPLOYMENT:
+   - Start development server and launch webapp
+   - Ensure it works end to end with frontend actions and backend processing
+
+CRITICAL SUCCESS CRITERIA:
+- File upload from frontend works
+- Data extraction in JSON format works for all formats
+- Classification works for all formats  
+- Summarization works for all formats
+- Results display in frontend
+- All file formats (JPEG, PDF, PNG) must be working before marking complete
