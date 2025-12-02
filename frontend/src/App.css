@@ -1,0 +1,193 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #61dafb;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+h3 {
+  margin-bottom: 15px;
+  color: #61dafb;
+  text-align: left;
+}
+
+.upload-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #3a3f47;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section p {
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+input[type="file"] {
+  margin: 20px 0;
+  padding: 10px;
+  border: 2px dashed #61dafb;
+  border-radius: 5px;
+  background-color: #282c34;
+  color: white;
+  width: 100%;
+  max-width: 400px;
+}
+
+.file-info {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #4a5058;
+  border-radius: 5px;
+}
+
+.file-info p {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.upload-btn, .reset-btn {
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover, .reset-btn:hover {
+  background-color: #4fa8c5;
+}
+
+.upload-btn:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.processing {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #4a5058;
+  border-radius: 5px;
+}
+
+.processing p {
+  margin-bottom: 15px;
+  color: #61dafb;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #61dafb;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #d32f2f;
+  color: white;
+  border-radius: 5px;
+}
+
+.error button {
+  margin-top: 15px;
+  background-color: white;
+  color: #d32f2f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.results-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #3a3f47;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #4a5058;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.result-item p {
+  margin-bottom: 10px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.classification {
+  font-size: 18px;
+  font-weight: bold;
+  color: #61dafb !important;
+  background-color: #282c34;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center !important;
+}
+
+.summary {
+  font-style: italic;
+  background-color: #282c34;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 4px solid #61dafb;
+}
+
+.ocr-results {
+  background-color: #282c34;
+  color: #61dafb;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.reset-btn {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 18px;
+}
